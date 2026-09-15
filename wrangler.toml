@@ -1,0 +1,20 @@
+name = "parkomat"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+BOT_USERNAME = "parkomatbot_bot"
+RETENTION_MINUTES = "30"
+
+[triggers]
+crons = ["*/10 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "parkomat-db"
+database_id = "fd839e1d-9f9d-4f88-b6c7-c554ac8d5299"
+migrations_dir = "migrations"
+
+[dev]
+port = 8787
